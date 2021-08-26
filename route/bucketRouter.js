@@ -5,13 +5,13 @@
 // BucketListCheck
 
 const express = require('express')
-const BucketDelete = require('../Controller/BucketDelete')
-const AllBucket = require('../Controller/AllBucket')
-const MyBucket = require('../Controller/MyBucket')
-const BucketAdd = require('../Controller/BucketAdd')
-const BucketListCheck = require('../Controller/BucketListCheck')
-const BucketLike = require('../Controller/BucketLike')
-const MyBucketChecked = require('../Controller/MyBucketChecked')
+const BucketDelete = require('../controller/bucketDelete')
+const AllBucket = require('../controller/allBucket')
+const MyBucket = require('../controller/myBucket')
+const BucketAdd = require('../controller/bucketAdd')
+const BucketListCheck = require('../controller/bucketListCheck')
+const BucketLike = require('../controller/bucketLike')
+const MyBucketChecked = require('../controller/myBucketChecked')
 
 const BucketRouter = express.Router();
 

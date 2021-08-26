@@ -1,6 +1,6 @@
 const xlsx = require('node-xlsx')
 const fs = require('fs')
-const obj = xlsx.parse(__dirname + '/lifedata.xlsx')  // 엑셀 데이터 읽어옴.
+const obj = xlsx.parse(__dirname + '/lifeData.xlsx')  // 엑셀 데이터 읽어옴.
 // 혹시 ec2에서 작동 안된다면 obj에 복붙해서 직접 넣기
 
 module.exports = (gender, age) => {

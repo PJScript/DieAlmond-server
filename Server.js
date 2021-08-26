@@ -1,23 +1,22 @@
 const express = require('express')
 const mongoose = require('mongoose')
-const BucketRouter = require('./Route/BucketRouter.js')   //route
-const ConditionRouter = require('./Route/ConditionRouter.js')
-const ContactRouter = require('./Route/ContactRouter.js')
-const MypageRouter = require('./Route/MypageRouter.js')
-const Crawling = require('./Controller/Crawling.js')
+
+const MypageRouter = require('./route/myPageRouter')
+const BucketRouter = require('./route/bucketRouter')
+const Crawling = require('./controller/crawling.js')
 const cors = require('cors')
 //라우팅
 
-const GetMain = require('./Controller/Main')
-const Setting = require('./Controller/Setting')
-const Signout = require('./Controller/SignOut')
-const WithDrawal = require('./Controller/WithDrawal.js')
+const GetMain = require('./controller/main')
+const Setting = require('./controller/setting')
+const Signout = require('./controller/signOut')
+const WithDrawal = require('./controller/withDrawal.js')
 
 
 // const Facebook = require('./Controller/SnsLogin/Facebook')
 // const Github = require('./Controller/SnsLogin/Github')
-const Google = require('./Controller/SnsLogin/Google')
-const Kakao = require('./Controller/SnsLogin/Kakao')
+const Google = require('./controller/snsLogin/google')
+const Kakao = require('./controller/snsLogin/kakao')
 // const Naver = require('./Controller/SnsLogin/Naver')
 
 //소셜 로그인 컨트롤러
