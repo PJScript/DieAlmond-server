@@ -1,6 +1,6 @@
-const tokenVerify = require('../middleware/TokenVerify')
-const BucketList = require('../Database/Model/BucketList')
-const User = require('../Database/Model/User')
+const tokenVerify = require('../middleware/tokenVerify')
+const BucketList = require('../Database/Model/bucketList')
+const User = require('../Database/Model/user')
 
 module.exports = async (req, res) => {
   let verifyData = await tokenVerify(req,res)

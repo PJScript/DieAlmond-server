@@ -1,8 +1,8 @@
 const axios = require("axios")
-const User = require('../Database/Model/User')
-const BucketList = require('../Database/Model/BucketList')
-const allRemover = require('../middleware/AllRemover')
-const likeRemover = require('../middleware/LikeRemover')
+const User = require('../Database/Model/user')
+const BucketList = require('../Database/Model/bucketList')
+const allRemover = require('../middleware/allRemover')
+const likeRemover = require('../middleware/likeRemover')
 
 module.exports = async (req, res) => {
   if (req.headers.authorization) {

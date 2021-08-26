@@ -1,6 +1,6 @@
 const axios = require('axios')
-const User = require('../Database/Model/User')
-const BucketList = require('../Database/Model/BucketList')
+const User = require('../Database/Model/user')
+const BucketList = require('../Database/Model/bucketList')
 
 
 module.exports = async (req, res) => {

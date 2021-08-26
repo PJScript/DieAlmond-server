@@ -1,6 +1,6 @@
-let User = require('../Database/Model/User')
-let BucketList = require('../Database/Model/BucketList')
-const remover = require('../middleware/UserDataRemover')  // 배열의 특정 요소삭제 1차원배열에 id라는 key를 가진 객체가 들어있는 구조 여야함
+let User = require('../Database/Model/user')
+let BucketList = require('../Database/Model/bucketList')
+const remover = require('./userDataRemover')  // 배열의 특정 요소삭제 1차원배열에 id라는 key를 가진 객체가 들어있는 구조 여야함
 // [{id:짱구},{id:철수}]  여기서 id는 닉네임
 
 module.exports = (userinfo,bucketlist) => {
