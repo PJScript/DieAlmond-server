@@ -1,6 +1,6 @@
 const express = require('express')
-const GetMypage = require('../Controller/GetMyPage')
-const PatchMypage = require('../Controller/PatchMypage')
+const GetMypage = require('../controller/getMyPage')
+const PatchMypage = require('../controller/patchMypage')
 
 const MypageRouter = express.Router();
 

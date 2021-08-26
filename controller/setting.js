@@ -1,8 +1,8 @@
 const life = require('../life/life')
 const axios = require('axios')
-const User = require('../Database/Model/user')
+const User = require('../database/model/user')
 const nickNameChange = require('../middleware/nicknameChange')
-const BucketList = require('../Database/Model/bucketList')
+const BucketList = require('../database/model/bucketList')
 
 // { year : 1999, month: 2, day: 17, gender : male, sleep : 8, smoking : 10, alcohol : 2}
 module.exports = async (req, res) => {

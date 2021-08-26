@@ -1,4 +1,4 @@
-const User = require('../Database/Model/user')
+const User = require('../database/model/user')
 const remover = require('./userDataRemover')
 //targetUser 는 좋아요 누른 게시물의 주인
 // userinfo 는 좋아요를 누른 사람

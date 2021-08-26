@@ -3,8 +3,8 @@
 // BucketList[n].author 를 req.body.nickname으로 변경
 // BucketList[n].like[n].id 를 req.body.nickname 으로 변경
 
-const User = require('../Database/Model/user')
-const BucketList = require('../Database/Model/bucketList')
+const User = require('../database/model/user')
+const BucketList = require('../database/model/bucketList')
 
 
 module.exports = async (req, userInfo) => {

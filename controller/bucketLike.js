@@ -1,6 +1,6 @@
 const tokenVerify = require('../middleware/tokenVerify')
-const User = require('../Database/Model/user')
-const BucketList = require('../Database/Model/bucketList')
+const User = require('../database/model/user')
+const BucketList = require('../database/model/bucketList')
 const remover = require('../middleware/userDataRemover')  // id라는 key 를 포함하는 객체를 가진 1차원 배열의 요소 삭제
 const dataUpdate = require('../middleware/dataUpdate')  // 파라미터에 해당하는 model에서 특정데이터 업데이트
 const myListTargetLike = require('../middleware/myListTargetLike')
