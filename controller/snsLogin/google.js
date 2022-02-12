@@ -3,6 +3,8 @@ const User = require('../../database/model/user')
 const jwt = require('jsonwebtoken')
 
 module.exports = async (req,res)=>{
+
+  console.log(req.headers,"요청 해더")
     let access_token = req.headers.authorization  //클라이언트가 보내준 엑세스 토큰
 
     if(access_token === undefined){
