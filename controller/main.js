@@ -2,6 +2,7 @@ const axios = require('axios')
 const User = require('../database/model/user')
 
 module.exports = async (req,res)=>{
+  // res.status(200).send("hi")
   if(req.headers.authorization){  //토큰 있음
     let access_token = req.headers.authorization
     if(req.headers.sns === 'kakao'){     ///////////////////////////////kakao
@@ -26,6 +27,7 @@ module.exports = async (req,res)=>{
         }
       })
     }else if(req.headers.sns === 'google'){   ///////////////////////////google
+      console.log('구글')
       await axios('https://www.googleapis.com/oauth2/v3/userinfo',
       {
         method:'GET',
@@ -38,6 +40,7 @@ module.exports = async (req,res)=>{
         if(!userInfo){
           res.status(401).send({'code':401,'msg':'not authorization token'})
         }else{
+          console.log("잘보냈다.")
           res.status(200).send({'userinfo':userInfo,'msg':'success'})
         }
       }).catch((err) => {

@@ -6,6 +6,7 @@ const BucketList = require('../database/model/bucketList')
 
 // { year : 1999, month: 2, day: 17, gender : male, sleep : 8, smoking : 10, alcohol : 2}
 module.exports = async (req, res) => {
+  console.log("세팅")
   const gender = req.body.gender
   const age = req.body.age
   const data = life(gender,age).toString()  //  life는 나이대별 기대여명을 리턴해주는 함수
