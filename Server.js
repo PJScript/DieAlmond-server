@@ -32,7 +32,7 @@ app.use(cors({
     credentials: true,
     method: ['GET', 'POST', 'DELETE', 'PUT', 'OPTIONS']
 }))
-app.get('/', (req, res) => { res.send('Hello world') })
+app.get('/', (req, res) => { res.status(200).send('Hello world') })
 app.post('/', (req, res) => { res.send('post hello') })
 // 테스트용 
 
