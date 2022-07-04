@@ -4,6 +4,8 @@
   "main": "index.js",
   "licence": "MIT",
   "dependencies": {
+    "@tensorflow/tfjs": "^3.18.0",
+    "@tensorflow/tfjs-node": "^3.18.0",
     "axios": "^0.21.1",
     "cheerio": "^1.0.0-rc.10",
     "cors": "^2.8.5",
