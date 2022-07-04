@@ -62,4 +62,4 @@ mongoose.connect(process.env.MONGO_URI, {
 
 
 
-app.listen(8080, () => { console.log('open 80 port') })
+app.listen(process.env.PORT || 8080, () => { console.log('open 8080 port') })
