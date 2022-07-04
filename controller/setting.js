@@ -3,14 +3,17 @@ const axios = require('axios')
 const User = require('../database/model/user')
 const nickNameChange = require('../middleware/nicknameChange')
 const BucketList = require('../database/model/bucketList')
+const tensorflow = require('../tensor/tf')
+
 
 // { year : 1999, month: 2, day: 17, gender : male, sleep : 8, smoking : 10, alcohol : 2}
 module.exports = async (req, res) => {
   console.log("세팅")
   const gender = req.body.gender
   const age = req.body.age
-  const data = life(gender,age).toString()  //  life는 나이대별 기대여명을 리턴해주는 함수
 
+
+  
   if (req.headers.authorization) {  //*회원* 이라면 db에 쓰고 회원 아니면 걍 데이터만 보내줌
     let access_token = req.headers.authorization
 
@@ -44,7 +47,9 @@ module.exports = async (req, res) => {
                 'age': req.body.age,
                 'nickname': req.body.nickname
               }
-            }).then(res.status(200).send({ 'life': data, 'msg': 'success' }))
+            }).then(() => {
+              tensorflow.tfGo(req.body.age,req.body.smoking,res)
+            })
             .catch((err) => { 
               console.log('Controller/Setting db ERROR', err) 
             })  
@@ -101,7 +106,9 @@ module.exports = async (req, res) => {
       }).catch(err => console.log(err))
     }
   }else {// *비회원* 토큰 없어도 기대여명은 보내줌
-    res.status(200).send({ 'life': data, 'msg': 'success' })
+    tensorflow.tfGo(req.body.age,req.body.smoking,res)
+
+    // res.status(200).send({ 'life': data, 'msg': 'success' })
   }// 비회원도 받을 순 있음.
 }
 

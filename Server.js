@@ -1,6 +1,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
-const tensorflow = require('./tensor/tf')
+
+
 
 const MypageRouter = require('./route/myPageRouter')
 const BucketRouter = require('./route/bucketRouter')
@@ -34,7 +35,8 @@ app.use(cors({
     method: ['GET', 'POST', 'DELETE', 'PUT', 'OPTIONS']
 }))
 app.get('/', (req, res) => { 
-tensorflow.tfGo(req.body.age,req.body.count,res)
+// tensorflow.tfGo(req.body.age,req.body.count,res)
+res.status(200).send('hi')
 
 }
     )
