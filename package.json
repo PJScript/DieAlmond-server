@@ -28,6 +28,6 @@
     "mocha": "^9.0.1"
   },
   "scripts": {
-    "start":"node Sever.js"
+    "start":"node Server.js"
   }
 }
