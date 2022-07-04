@@ -1,5 +1,6 @@
 const express = require('express')
 const mongoose = require('mongoose')
+const tensorflow = require('./tensor/tf')
 
 const MypageRouter = require('./route/myPageRouter')
 const BucketRouter = require('./route/bucketRouter')
@@ -32,7 +33,11 @@ app.use(cors({
     credentials: true,
     method: ['GET', 'POST', 'DELETE', 'PUT', 'OPTIONS']
 }))
-app.get('/', (req, res) => { res.status(200).send('Hello world') })
+app.get('/', (req, res) => { 
+tensorflow.tfGo(req.body.age,req.body.count,res)
+
+}
+    )
 app.post('/', (req, res) => { res.send('post hello') })
 // 테스트용 
 
